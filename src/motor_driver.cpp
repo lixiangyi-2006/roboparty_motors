@@ -28,6 +28,9 @@ std::shared_ptr<MotorDriver> MotorDriver::create_motor(uint16_t motor_id, const 
     } else if (motor_type == "XYN") {
         return std::make_shared<XynMotorDriver>(motor_id, interface_type, interface,
                                                 static_cast<XYN_Motor_Model>(motor_model), motor_zero_offset);
+    } else if (motor_type == "FX") {                                                                                    
+        return std::make_shared<FXMotorDriver>(motor_id, interface_type, interface,                                     
+                                                static_cast<FX_Motor_Model>(motor_model), motor_zero_offset); 
     } else {
         throw std::runtime_error("Motor type not supported");
     }
