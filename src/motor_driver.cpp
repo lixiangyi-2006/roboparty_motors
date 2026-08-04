@@ -7,6 +7,7 @@
 #include "evo_motor_driver.hpp"
 #include "lro_motor_driver.hpp"
 #include "xyn_motor_driver.hpp"
+#include "fx_motor_driver.hpp"   
 
 MotorDriver::MotorDriver() {
     std::vector<spdlog::sink_ptr> sinks;
